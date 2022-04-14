@@ -1,6 +1,18 @@
 # PE2022_Team 8
 
+## Members
++ Hoang Duc Hung (16207) (Team leader)
++ Hoang Ngoc Anh Khoi (15900)
++ Nguyen Gia Bao (16885)
++ Vo Nguyen Duy Bach (16770)
++ Pham Phuc Khoa (16765)
++ Trinh Nguyen Hoang Chau (16076)
++ Nguyen Quang Duy (16773)
++ Le Duc Minh (16669)
++ Le Phuoc Thuy (15953)
 
+## Project
+- Project 1 (Online Lib management)
 
 ## Getting started
 
