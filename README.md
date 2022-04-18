@@ -11,8 +11,22 @@
 + Le Duc Minh (16669)
 + Le Phuoc Thuy (15953)
 
-## Project
-- Project 1 (Online Lib management)
+## Project: Online Library Management
+
+Develop an online library management application where users can rent books for a specific time, like them and can also review books. This will have two interfaces:
+
+    - User interface
+    - Admin interface
+
+* Users registered for this application can:
+    - Browse books from the library
+    - Filter them based on category, author, publication, etc.
+    - Pay and rent them for a specific duration
+    - Like/Review them
+* Admin of this application can
+    - List and manage books
+    - Track rented books and their availability
+    - Send notifications via email to users once lease expires
 
 ## Getting started
 
