@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import "./variables";
+@font-face {
+    font-family: palatino;
+    src: url('./Palatino\ Font.ttf') format(truetype);
+}
+
+.footer{
+    height: 45vh;
+    background-color: $textColor1;
+    &-wrapper{
+        margin-left: 20%;
+        margin-right: 20%;
+        
+        background-color: transparent;
+        height: 80%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    &-title{
+        h1{
+            font-family: Arial, Helvetica, sans-serif;;
+            color: $textColor2;
+            font-size: 1rem;
+            padding-top: 30%;
+            text-align: center;
+            font-weight: lighter;
+            letter-spacing: 0.5px;            
+        }
+    }
+
+    &-content{
+        p{
+            position: relative;
+            font-family: Arial, Helvetica, sans-serif;
+            color: $textColor2;
+            font-size: 0.9rem;
+            font-weight: lighter;
+            letter-spacing: 0.5px;
+            left: 22%;
+            padding-top: 15%;
+            line-height: 2.5;
+        }
+    }
+
+    &-content2-wrapper{
+        display: grid;
+        position: relative;
+        top: 29.8%;
+        left: 43%;
+        a{
+            width: fit-content;
+            font-family: Arial, Helvetica, sans-serif;
+            color: $textColor2;
+            font-size: 0.9rem;
+            text-decoration: none;
+            padding-bottom: 7.5%;
+        }
+    }
+
+    &-content3{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        p{
+            position: relative;
+            font-family: Arial, Helvetica, sans-serif;
+            color: $textColor2;
+            font-size: 1rem;
+            left: 22%;
+            top: 80%;
+        }
+    }
+}

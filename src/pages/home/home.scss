@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import "../../components/variables";
+@font-face {
+    font-family: palatino;
+    src: url('../../components/Palatino\ Font.ttf') format(truetype);
+}
+html{
+    height: 100%;
+}
+
+.home{
+    height: 100%;
+    width: 100%;
+    .header-wrapper{
+        position: relative;
+        height: 75vh;    
+        background-color: #FAD405;
+        margin-top: 1.5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        img{
+            width: 60%;
+            height: 100%;
+            object-position: -14rem;
+            object-fit: cover;
+        }
+        h1{
+            position: absolute;
+            display: block;
+            font-family: 'Koulen', cursive;
+            color: $textColor2;
+            top: 30%;
+            left: 35%;
+            font-size: 7rem;
+            width: 60%;
+            line-height: 1.1;
+        }
+    }
+
+    .best-sellers{
+        position: relative;
+        height: 220vh;
+        h1{
+            position: relative;
+            font-family: 'Koulen', cursive;
+            text-align: center;
+            top: 8%;
+            color: $textColor1;
+            font-size: 5rem;
+        }
+        &-wrapper{
+            position: relative;
+            height: 180vh;
+            top: 12%;
+            margin-left: 5%;
+            margin-right: 5%;
+            background-image: linear-gradient($textColor2 0%, $textColor2 5%, $textColor1 5%, $textColor1 100%);
+            h1{
+                position: relative;
+                top: 10%;
+                color: $textColor2;
+                text-align: center;
+            }
+
+            .transition{
+                position: relative;
+                text-align: center;
+                font-size: 5.5rem;
+                top: 25%;
+            }
+
+            .read{
+                position: relative;
+                display: block;
+                text-decoration: none;
+                border-style: solid;
+                border-width: 3px;
+                border-color: $textColor2;
+                color: $textColor2;
+                height: 36px;
+                width: 150px;
+                text-align: center;
+                padding-top: 1%;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 28%;
+            }
+        }
+    }
+
+    .book-launch{
+        height: 105vh;
+        h1{
+            position: relative;
+            color: $textColor1;
+            font-family: 'Koulen', cursive;
+            font-size: 5rem;
+            top: 0;
+            text-align: center;
+            margin-bottom: 4%;
+        }
+        &-wrapper{
+            display: grid;
+            margin-left: 5%;
+            margin-right: 5%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 80vh;
+            &-left{
+                h1{
+                    position: relative;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 1.5rem;
+                    top: 20%;
+                    left: 10%;
+                }
+                p{
+                    position: relative;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: $textColor1;
+                    font-size: 1.1rem;
+                    top: 20%;
+                    left: 40.5%;
+                    margin-bottom: 5%;
+                    line-height: 2;
+                }
+
+                a{
+                    position: relative;
+                    text-decoration: none;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: $textColor1;
+                    border-style: solid;
+                    border-width: 3px;
+                    padding: 1.5%;
+                    text-transform: uppercase;
+                    top: 24%;
+                    left: 40%;
+                }
+            }
+            &-right{
+                .image-outer{
+                    position: relative;
+                    height: 90%;
+                    width: 550px;
+                    background-color: $textColor1;
+                    .image-inner{
+                        position: absolute;
+                        height: 95%;
+                        width: 95%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background-color: #FAD405;
+                        img{
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

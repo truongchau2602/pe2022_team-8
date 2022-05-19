@@ -1,0 +1,59 @@
+@import "./variables";
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@font-face {
+    font-family: palatino;
+    src: url('./Palatino\ Font.ttf') format(truetype);
+}
+
+
+
+.nav{
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    font-family: palatino;
+    height: 10vh;
+    width: 100%;
+    margin-top: 1.5%;
+    align-items: center;
+    z-index: 1;
+    .logo{
+        
+        a{
+            position: relative;
+            display: block;
+            font-family: 'Koulen', cursive;
+            height: 50px;
+            width: 50%;             
+            text-decoration: none;
+            background-color: $textColor1;
+            color: $textColor2; 
+            text-transform: uppercase;
+            font-size: 2.4rem;
+            text-align: center;
+            left: 25%;
+            padding-top: 4%;
+        }
+        
+
+        
+    }
+    ul{
+        display: grid;
+        grid-template-columns: repeat(5, 100px);
+        align-items: center;
+        justify-content: end;
+        position: relative;
+        left: -5%;
+        li{
+            list-style: none;
+            text-align: center;
+        }
+        a{
+            color: $textColor1;
+            font-size: 1.2rem;
+            text-decoration: none;
+            
+        }
+    }
+}

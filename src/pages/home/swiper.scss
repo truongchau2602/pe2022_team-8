@@ -1,0 +1,106 @@
+@font-face {
+    font-family: palatino;
+    src: url('../../components/Palatino\ Font.ttf') format(truetype);
+}
+
+.swiper1{
+    position: relative;
+    width: 80vw;
+    height: 35vh;
+    top: 0%;
+    .slide{
+        position: relative;
+        text-align: center;
+        height: 100%;
+        .item{
+            height: 100%;
+            background-color: transparent;
+            display: grid;
+            grid-template-rows:  75% 25%;
+            .image{
+                background-color: rgb(204, 204, 204);
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .content{
+                h2{
+                    position: relative;
+                    color: #fff;
+                    font-family: palatino;
+                    font-size: 1.1rem;
+                }
+                .title{
+                    position: relative;
+                    margin-top: 6%;
+                }
+                .price{
+                    position: relative;
+                    margin-top: 5%;
+                }
+            }
+        }
+    }
+
+    .swiper-button-prev{
+        position: relative;
+        top: 50%;
+        color: #fff;
+    }
+    .swiper-button-next{
+        color: #fff;
+    }
+}
+
+.swiper2{
+    height: 34vh;
+    width: 80vw;
+    position: relative;
+    top: 18%;
+    .slide{
+        position: relative;
+        text-align: center;
+        height: 100%;
+        .item{
+            height: 100%;
+            background-color: transparent;
+            display: grid;
+            grid-template-rows:  75% 25%;
+            .image{
+                background-color: rgb(204, 204, 204);
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .content{
+                h2{
+                    position: relative;
+                    color: #fff;
+                    font-family: palatino;
+                    font-size: 1.1rem;
+                }
+                .title{
+                    position: relative;
+                    margin-top: 6%;
+                }
+                .price{
+                    position: relative;
+                    margin-top: 5%;
+                }
+            }
+        }
+    }
+
+    .swiper-button-prev{
+        position: relative;
+        top: 50%;
+        color: #fff;
+    }
+    .swiper-button-next{
+        color: #fff;
+    }
+}
