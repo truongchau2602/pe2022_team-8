@@ -1,0 +1,4 @@
+For this week we have finished the UI for the main home page, about page, and contact page. Bookstore page and Login page still need to be worked on.
+Back-end tasks have been divided among group members. Khoi and Hung will work on the Login page front-end and back-end. Bach, Bao and Thuy will work on functionalities that happens after a user has logged into the website.
+Chau will work on email and database APIs.
+Minh, Duy, and Khoa will work on the Admin page.
