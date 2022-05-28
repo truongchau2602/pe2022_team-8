@@ -10,9 +10,10 @@ const authRouter = require('./routes/auth')
 
 const connectDB = async() =>{
     try{
-        await mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@book-project.qr5zx.mongodb.net/?retryWrites=true&w=majority`, {
+        await mongoose.connect('mongodb+srv://admin:Admin123@cluster0.e3tfm.mongodb.net/UsersDB?retryWrites=true&w=majority',{
+            //warning disable
             useNewUrlParser: true,
-            useUnifiedTopology: true,            
+            useUnifiedTopology: true
         })
 
         console.log('MongoDB Connected')

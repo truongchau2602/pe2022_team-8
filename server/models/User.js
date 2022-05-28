@@ -1,21 +1,15 @@
+//model for mongo
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema
 
-const UserSchema = new Schema({
-    username: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    password: {
-        type: String,
-        required: true
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    }
+const UserSchema = new mongoose.Schema({
+    //unique will prevent same username being created in database
+    username: {type:String,require:true, unique:true},
+    password:{type:String,require:true}
+},
+    //specify collection
+    { collection: 'Users'}
+)
 
-})
-
-module.exports = mongoose.model('users', UserSchema)
+const model = mongoose.model('UserSchema', UserSchema)
+//export this file and using the module
+module.exports = model

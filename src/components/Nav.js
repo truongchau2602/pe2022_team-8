@@ -19,7 +19,7 @@ function Nav() {
                 <Link to='/contact'>Contact</Link>
             </li>
             <li>
-                <Link to='/forget'>Log In</Link>
+                <Link to='/login'>Log In</Link>
             </li>
             <li>
                 <a href='#'>Cart</a>

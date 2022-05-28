@@ -51,11 +51,11 @@
 }
 
 .form__message--success {
-    color: var(--color-success);
+    color: greenyellow;
 }
 
 .form__message--error {
-    color: var(--color-error);
+    color: red;
 }
 
 .form__input-group {

@@ -16,7 +16,7 @@ function Forget() {
             <input type="email" className="form__input" placeholder="Email" />
             <div className='form__input-error--message '></div>
         </div>
-        <button className = "form__button">Submit</button>
+        <button type="submit" className = "form__button">Submit</button>
         <p className="form__text">
             <a className="form__link" href="./login" id="linkLogin">Back to sign in.</a>
         </p>
