@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,EAAE,CAAA;EACE,QAAQ,EAAE,QAAQ;EAClB,SAAS,EAAE,IAAI;EACf,GAAG,EAAE,GAAG;EACR,IAAI,EAAE,GAAG;EACT,SAAS,EAAE,qBAAqB;CACnC",
-    "sources": [
-        "bookstore.scss"
-    ],
-    "names": [],
-    "file": "bookstore.css"
-}
