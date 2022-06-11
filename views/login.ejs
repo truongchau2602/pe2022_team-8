@@ -1,96 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/style.css">
-        
-        <script async src="/js/search.js"></script>
-        <link href = "/assets/css/all.css" rel="stylesheet">
-        <title>Tick Tack</title>
-    </head>
+    <%- include("layouts/header"); -%>
 <body>
     <header>
         <%- include('layouts/navbar'); -%>
-
-        <div class="front">
-            <img src="/assets/img/yellow-cover.jpg">
-            <h1>"Today a reader,<br>Tomorrow a leader."</h1>
-            <div class="search-container">
-                <input type="text" onfocusin="myFunction(this)" onfocusout="myFunction2(this)" id="textField" placeholder="Search books, authors, categories..">
-                <button type="submit" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-           
-        </div>
     </header>
-    <div class="container">
-        <form class="form" id="login">
-            <h1 class="form__title">Login</h1>
+
+    <div class='Login'>
+        
+        <div class = "Login-form ">
+            <div class = "form__title">
+                <h1>Login</h1>
+            </div>
             <div class="form__message"></div>
-            <div class="form__input-group">
-                <input type="username" class="form__input" autofocus placeholder="Username or email">
-                <div class="form__input-error--message"></div>
+            <div class = "form__input-group">
+                <input type="username" id="username" class="form__input" placeholder="Username or Email" />
+                <div class='form__input-error--message '></div>
+                <input type="password" id="password" class="form__input" placeholder="Password" />    
+                <div class='form__input-error--message '></div>
             </div>
-    
-            <div class="form__input-group">
-                <input type="password" class="form__input" autofocus placeholder="Password">
-                <div class="form__input-error--message"></div>
-            </div>
-    
-            <button class="form__button" type="submit">Continue</button>
-    
+
+            <button type="submit" class = "form__button">Continue</button>
             <p class="form__text">
-                <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create an account.</a>
+                <a class="form__link" href="./register" id="linkCreateAccount">Don't have an account? Register here.</a>
             </p>
             <p class="form__text">
-                <a class="form__link" href="./" id="linkForgetPassword">Forgot your password?</a>
+                <a class="form__link" href="./forget" id="linkForgetPassword">Forgot your password?</a>
             </p>
-        </form>
-    
-        <form class="form form__hidden" id="createAccount">
-            <h1 class="form__title">Create Account</h1>
-            <div class="form__message"></div>
-            <div class="form__input-group">
-                <input type="username" class="form__input" autofocus placeholder="Username">
-                <div class="form__input-error--message"></div>
-            </div>
-            <div class="form__input-group">
-                <input type="email" class="form__input" autofocus placeholder="Email Address">
-                <div class="form__input-error--message"></div>
-            </div>
-            <div class="form__input-group">
-                <input type="password" class="form__input" autofocus placeholder="Password">
-                <div class="form__input-error--message"></div>
-            </div>
-            <div class="form__input-group">
-                <input type="password" class="form__input" autofocus placeholder="Confirm Password">
-                <div class="form__input-error--message"></div>
-            </div>
-            <button class="form__button" type="submit">Continue</button>
-    
-            <p class="form__text">
-                <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in.</a>
-            </p>
-        </form>
-    
-        <form class="form form__hidden" id="forgetPassword">
-            <h1 class="form__title">Forgot your password?</h1>
-            <div class="form__message"></div>
-            <div class="form__input-group">
-                <input type="email" class="form__input" autofocus placeholder="Email Address">
-                <div class="form__input-error--message"></div>
-            </div>
-    
-            <button class="form__button" type="submit">Continue</button>
-    
-            <p class="form__text">
-                <a class="form__link" href="./" id="linkLogin">Back to sign in.</a>
-            </p>
-        </form>
+        </div>
     </div>
-    <script src="/javascripts/main.js">
-    </script>
     
+       
+   
     <%- include('layouts/footer'); -%>
     <%- include('layouts/scripts'); -%>
 

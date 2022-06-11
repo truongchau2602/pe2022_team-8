@@ -1,7 +1,7 @@
 @font-face {
     font-family: palatino;
-    src: url('Palatino\ Font.ttf') format("truetype");
-}
+    src: url('../assets/webfonts/Palatino\ Font.ttf') format("truetype");
+  }
 
 @import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300&family=Roboto:wght@300&display=swap');
 
@@ -24,7 +24,8 @@ body{
 }
 
 header{
-    height: 100vh;
+    /* height: 100vh; */
+    height: 100%;
     width: 100%;
     display: grid;
     grid-template-rows: 10% 90%;
@@ -35,64 +36,20 @@ header{
     grid-template-columns: 30% 70%;
     margin-top: 2%;
 }
-
-.nav .logo{
-    position: relative;
-    width: 40%;
-    height: 100%;
-    background: #0E345A;
-    display: flex;
-    margin-left: 10%;
-    font-family: palatino;
-    font-size: 1em;
-    letter-spacing: 0.5px;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo .one{
-    height: 100%;
-    width: 50%;
-}
-
-.logo .two{
-    height: 100%;
-    width: 50%;
-    background: #fff;
-    border-style: solid;
-    border-color: #0E345A;
-    border-width: 3px;
-    transition: 700ms ease;
-}
-
-.logo .one h1{   
-    position: absolute;
-    text-align: end;
-}
-
-.logo .two h1{   
-    position: absolute;
-    text-align: start;
-}
-
-
-.logo .one h1 a{
-    text-decoration: none;
-    color: #fff;    
-}
-
-.logo .two h1 a{
-    text-decoration: none;
-    color: #0E345A;    
-}
-
-.two:hover{
-    background: #0E345A;
-    transition: 700ms ease;
-}
-
-.two:hover h1 a{
-    color: #fff;
+.nav .logo a {
+  position: relative;
+  display: block;
+  font-family: 'Koulen', cursive;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  background-color: #0E345A;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  text-align: center;
+  left: 25%;
+  padding-top: 4%;
 }
 
 .nav ul{
@@ -129,10 +86,10 @@ header{
 .front{
     position: absolute;
     background-color: #FAD405;
-    width: 94.4%;
-    height: 80vh;
+    width: 95%;
+    height: 65%;
     left: 50%;
-    top: 14%;
+    top: 20%;
     transform: translateX(-50%);
     overflow: hidden;
 
@@ -204,7 +161,7 @@ header{
 }
 
 footer{
-    height: 60vh;
+    height: 50vh;
     background: #0E345A;
     display: grid;
 }
