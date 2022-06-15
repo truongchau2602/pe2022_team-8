@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+@font-face {
+  font-family: palatino;
+  src: url('../assets/webfonts/Palatino\ Font.ttf') format("truetype");
+
+}
+img, svg {
+    max-width: 100%;
+    display: block;
+}
+.best-sellers {
+    position: relative;
+    height: 100%;
+}
+
+
+.header-wrapper {
+  position: relative;
+  height: 75vh;
+  background-color: #FAD405;
+  margin-top: 1.5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.header-wrapper img {
+  width: 60%;
+  height: 100%;
+  -o-object-position: -14rem;
+     object-position: -14rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header-wrapper h1 {
+  position: absolute;
+  display: block;
+  font-family: 'Koulen', cursive;
+  color: #ffffff;
+  top: 30%;
+  left: 35%;
+  font-size: 7rem;
+  font-weight: lighter;
+  width: 60%;
+  line-height: 1.1;
+}
+
+.best-sellers h1 {
+  position: relative;
+  margin-top: 5%;
+  font-family: 'Koulen', cursive;
+  text-align: center;
+  top: 8%;
+  color: #0E345A;
+  font-size: 5rem;
+  font-weight: lighter;
+}
+.best-sellers-wrapper {
+  position: relative;
+  height: 100%;
+  top: 12%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(5%, #ffffff), color-stop(5%, #0E345A), to(#0E345A));
+  background-image: linear-gradient(#ffffff 0%, #ffffff 5%, #0E345A 5%, #0E345A 100%);
+}
+
+.recommended-books{
+    position: relative;
+    height: 100%;
+    margin-top: 5%;
+  }
+
+.recommended-books h1 {
+  position: relative;
+  font-family: 'Koulen', cursive;
+  font-weight: lighter;
+  text-align: center;
+  top: 8%;
+  color: #0E345A;
+  font-size: 5rem;
+}
+.book-launch {
+  height: 115vh;
+}
+.book-launch h1 {
+  position: relative;
+  color: #0E345A;
+  font-family: 'Koulen', cursive;
+  font-size: 5rem;
+  font-weight: lighter;
+  top: 0;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 4%;
+}
+.book-launch-wrapper {
+  display: -ms-grid;
+  display: grid;
+  margin-left: 5%;
+  margin-right: 5%;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 80vh;
+      grid-template-rows: 80vh;
+}
+.book-launch-wrapper-left h1 {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  top: 20%;
+  left: 10%;
+}
+.book-launch-wrapper-left a {
+  position: relative;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  color: #0E345A;
+  border-style: solid;
+  border-width: 3px;
+  padding: 1.5%;
+  text-transform: uppercase;
+  top: 24%;
+  left: 40%;
+}
+.book-launch-wrapper-left p {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0E345A;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    top: 20%;
+    left: 40.5%;
+    margin-bottom: 5%;
+    line-height: 2;
+  }
+
+.book-launch-wrapper-right .image-outer {
+  position: relative;
+  height: 90%;
+  width: 550px;
+  background-color: #0E345A;
+}
+.book-launch-wrapper-right .image-outer .image-inner {
+  position: absolute;
+  height: 95%;
+  width: 95%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #FAD405;
+}
+
+.book-launch-wrapper-right .image-outer .image-inner img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+
+
+.section-title {margin-block: 4rem 1rem;}
+
+.media-container {position: relative;margin-top: 5%;}
+
+.media-scroller, .media-group {
+    display: grid;
+    gap: 0.25rem;
+    grid-auto-flow: column;
+}
+
+.media-scroller {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    grid-auto-columns: 100%;
+    padding: 0 3rem;
+    scroll-padding-inline: 3rem;
+}
+.media-scroller:first-of-type {padding-left: 0;}
+
+.media-group {
+    grid-auto-columns: 1fr;
+    overflow: hidden;
+}
+
+.media-element {
+    position: relative;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+.media-element > img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.next, .previous {
+    display: none;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    width: 3rem;
+    padding: 1rem;
+    background: rgb(0 0 0 / 0);
+    opacity: 0;
+    transition: opacity .25s;
+}
+.previous {
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.next {
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.media-group:first-child :where(.next, .previous) {display: flex;}
+
+:where(.next, .previous):hover {background: rgb(0 0 0 / 0.3);}
+:where(.next, .previous) > svg {
+    transition: transform 75ms linear;
+    transform: scale(1);
+}
+:where(.next, .previous):hover > svg {transform: scale(1.2);}
+
+.media-group:target :where(.next, .previous) {display: flex;}
+
+.media-scroller:has(:target:not(:first-child)) .media-group:first-of-type .next {display: none;}
+
+.navigation-indicators {
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    gap: 3px;
+    top: -1rem;
+    right: 2rem;
+    transition: opacity .25s;
+}
+
+.navigation-indicators > * {
+    width: 1rem;
+    height: 2px;
+    background: white;
+    opacity: 0.5;
+    transition-delay: .5s;
+}
+
+.media-scroller:hover :where(.next, .previous),
+.media-group:not(:target) ~ .navigation-indicators > *:nth-child(1),
+.media-group:nth-child(1):target ~ .navigation-indicators > *:nth-child(1),
+.media-group:nth-child(2):target ~ .navigation-indicators > *:nth-child(2),
+.media-group:nth-child(3):target ~ .navigation-indicators > *:nth-child(3),
+.media-group:nth-child(4):target ~ .navigation-indicators > *:nth-child(4),
+.media-scroller:hover .navigation-indicators {opacity: 1;}
+
+.media-group:not(:nth-child(1)):target ~ .navigation-indicators > *:nth-child(1) {opacity: .5;}

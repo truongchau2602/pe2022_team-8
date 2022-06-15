@@ -2,6 +2,7 @@ const express = require("express")
 const app = new express()
 const ejs = require("ejs")
 
+
 app.set("view engine", "ejs")
 
 app.use(express.static("public"))
@@ -24,4 +25,13 @@ app.get("/about", (req,res)=>{
 })
 app.get("/login",(req,res)=>{
     res.render("login")
+})
+app.get("/register", (req,res)=>{
+    res.render("register")
+})
+app.get("/carousel", (req,res)=>{
+    res.render("testCarousel")
+})
+app.get("/ReactCarousel", (req,res)=>{
+    res.render("testReactCarousel")
 })

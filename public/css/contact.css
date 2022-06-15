@@ -3,7 +3,9 @@
   font-family: palatino;
   src: url('../assets/webfonts/Palatino\ Font.ttf') format("truetype");
 }
-
+html *{
+  font-weight: lighter;
+}
 .contact {
   height: 150vh;
 }
