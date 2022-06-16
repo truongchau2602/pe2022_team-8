@@ -29,9 +29,9 @@ app.get("/login",(req,res)=>{
 app.get("/register", (req,res)=>{
     res.render("register")
 })
-app.get("/carousel", (req,res)=>{
-    res.render("testCarousel")
+app.get("/checkout",(req,res)=>{
+    res.render("checkout")
 })
-app.get("/ReactCarousel", (req,res)=>{
-    res.render("testReactCarousel")
+app.get("/bookItem",(req,res)=>{
+    res.render("bookItem")
 })
