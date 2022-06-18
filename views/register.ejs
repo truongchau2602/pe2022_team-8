@@ -15,18 +15,21 @@
                 <div class = "form__title">
                     <h1>Register</h1>
                 </div>
-                <div class="form__message"></div>
-                <div class = "form__input-group">
-                    <input type="text" id="username" class="form__input" placeholder="Username" />
-                    <div class='form__input-error--message '></div>
-                    <input type="email" id="email" class="form__input" placeholder="Email" />
-                    <div class='form__input-error--message '></div>
-                    <input type="password" id="password" class="form__input" placeholder="Password" />
-                    <div class='form__input-error--message '></div>
-                    <input type="password" id="confirmpassword" class="form__input" placeholder="Confirm Password" />
-                    <div class='form__input-error--message' id="alert"></div>
-                </div>
+                    <div class = "form__input-group">
+                        <form action="/auth/users/register" method="POST">
+
+                        <input type="text" id="username" class="form__input" placeholder="username" name="username" />
+                        <div class='form__input-error--message '></div>
+                        <input type="email" id="email" class="form__input" placeholder="email" name="email"/>
+                        <div class='form__input-error--message '></div>
+                        <input type="password" id="password" class="form__input" placeholder="password" name="password" />
+                        <div class='form__input-error--message '></div>
+                        <!-- <input type="text" id="confirmpassword" class="form__input" placeholder="Confirm Password" /> -->
+                        <div class='form__input-error--message' id="alert"></div>
+                    </div>
                 <button type="submit" class = "form__button">Submit</button>
+                </form>
+                
                 <p class="form__text">
                     <a class="form__link" href="./login" id="linkLogin">Already have an account? Login here.</a>
                 </p>
