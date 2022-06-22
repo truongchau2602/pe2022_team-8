@@ -32,7 +32,7 @@ app.listen(4005, ()=>{
 const Book = require("./models/book")
 app.get("/",(req,res)=>{
     Book.find({label:"Best Sellers"}, function(err, bookItems){
-        console.log("Best sellers:",bookItems)
+        // console.log("Best sellers:",bookItems)
         if(err){
             console.log(err)
         }

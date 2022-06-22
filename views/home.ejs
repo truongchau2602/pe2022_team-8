@@ -17,14 +17,14 @@
       <div class="media-scroller">
         <!--   Group 1 -->
         <div class="media-group" id="1">
-          <% for(var i=0; i<bestsellers.length/2; i++){ %>
+          <% for(var i=0; i<5; i++){ %>
             <div class="media-element">
               <a href="/bookItems/<%= bestsellers[i]._id %>">
                 <img src="<%= bestsellers[i].image %>" alt="" ismap>
               </a>
               <div class="content">
-                <h2 class="title">I'm a product</h2>
-                <h2 class="price">$20.00</h2>
+                <h2 class="bookItem-title">I'm a product</h2>
+                <h2 class="bookItem-price">$20.00</h2>
               </div>
               
             </div>
@@ -42,11 +42,16 @@
             <svg>
               <use href="#previous"></use>
             </svg>
-          <% for(var i=5; i<bestsellers.length; i++){ %>
+          <% for(var i=5; i<10; i++){ %>
             <div class="media-element">
               <a href="/bookItems/<%= bestsellers[i]._id %>">
                 <img src="<%= bestsellers[i].image %>" alt="" ismap>
               </a>
+              <div class="content">
+                <h2 class="bookItem-title">I'm a product</h2>
+                <h2 class="bookItem-price">$20.00</h2>
+              </div>
+
             </div>
           <%} %>
           <a class="next" href="#2" aria-label="next">
@@ -84,108 +89,52 @@
     </div>
     <div class="media-container">
       <div class="media-scroller">
-  
         <!--   Group 3 -->
         <div class="media-group" id="3">
-          
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book6.webp"
-              alt="" ismap>
-            </a>
-          </div>
-  
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book3.webp"
-              alt="" ismap>
-            </a>
-          </div>
-  
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book8.webp"
-              alt="" ismap>
-            </a>
-          </div>
-          
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book9.webp"
-              alt="" ismap>
-            </a>
-          </div>
-  
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book1.webp"
-              alt="" ismap>
-            </a>
-          </div>
-      
-          
+          <% for(var i=0; i<5; i++){ %>
+            <div class="media-element">
+              <a href="/bookItems/<%= bestsellers[i]._id %>">
+                <img src="<%= bestsellers[i].image %>" alt="" ismap>
+              </a>
+              <div class="content">
+                <h2 class="bookItem-title">I'm a product</h2>
+                <h2 class="bookItem-price">$20.00</h2>
+              </div>
+              
+            </div>
+          <%} %>
           <a class="next" href="#4" aria-label="next">
             <svg>
               <use href="#next"></use>
             </svg>
           </a>
         </div>
-  
-        <!-- Group 4   -->
+
+        <!--   Group 4 -->
         <div class="media-group" id="4">
           <a class="previous" href="#3">
             <svg>
               <use href="#previous"></use>
             </svg>
+          <% for(var i=5; i<10; i++){ %>
+            <div class="media-element">
+              <a href="/bookItems/<%= bestsellers[i]._id %>">
+                <img src="<%= bestsellers[i].image %>" alt="" ismap>
+              </a>
+              <div class="content">
+                <h2 class="bookItem-title">I'm a product</h2>
+                <h2 class="bookItem-price">$20.00</h2>
+              </div>
+
+            </div>
+          <%} %>
+          <a class="next" href="#2" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
           </a>
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book1.webp"
-              alt="" ismap>
-            </a>
-          </div>
-  
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book2.webp"
-              alt="" ismap>
-            </a>
-          </div>
-  
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book3.webp"
-              alt="" ismap>
-            </a>
-          </div>
-          
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book4.webp"
-              alt="" ismap>
-            </a>
-          </div>
-  
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book5.webp"
-              alt="" ismap>
-            </a>
-          </div>
+        </div>
         
-  
-        
-  
         <div class="navigation-indicators">
           <div></div>
           <div></div>
@@ -195,7 +144,7 @@
   
       </div>
   </div>
-    </div>
+    
     
     <div class='book-launch'>
         <h1>Coming Soon</h1>

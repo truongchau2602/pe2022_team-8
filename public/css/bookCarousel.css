@@ -62,12 +62,12 @@ img, svg {
   font-family: palatino;
   font-size: 1.3rem;
 }
-.content .title {
+.content .bookItem-title {
   position: relative;
   margin-top: 6%;
   text-align: center;
 }
-.content .price {
+.content .bookItem-price {
   position: relative;
   margin-top: 5%;
   text-align: center;
