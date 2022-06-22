@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- <%- include("layouts/header"); -%> -->
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/style.css">
-        <script async src="/js/search.js"></script>
-        <link rel="stylesheet" type="text/css" href="/css/about.css">
-        <link rel="stylesheet" type="text/css" href="/css/contact.css">
-        <link rel="stylesheet" type="text/css" href="/css/Login.css">
-        <link rel="stylesheet" type="text/css" href="/css/Register.css">
-        <link rel="stylesheet" type="text/css" href="/css/bookCarousel.css">
-
-    
-        <link href = "/assets/css/all.css" rel="stylesheet">
-        <title>Tick Tack</title>
-    </head>
+    <%- include("layouts/header"); -%>
 <body>
     <header>
         <%- include('layouts/navbar'); -%>
@@ -30,108 +15,47 @@
       </div>
   <div class="media-container">
       <div class="media-scroller">
-  
         <!--   Group 1 -->
         <div class="media-group" id="1">
-          
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book1.webp"
-              alt="" ismap>
-            </a>
-          </div>
-  
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book2.webp"
-              alt="" ismap>
-            </a>
-          </div>
-  
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book3.webp"
-              alt="" ismap>
-            </a>
-          </div>
-          
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book4.webp"
-              alt="" ismap>
-            </a>
-          </div>
-  
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book5.webp"
-              alt="" ismap>
-            </a>
-          </div>
-          
+          <% for(var i=0; i<bestsellers.length/2; i++){ %>
+            <div class="media-element">
+              <a href="/bookItems/<%= bestsellers[i]._id %>">
+                <img src="<%= bestsellers[i].image %>" alt="" ismap>
+              </a>
+              <div class="content">
+                <h2 class="title">I'm a product</h2>
+                <h2 class="price">$20.00</h2>
+              </div>
+              
+            </div>
+          <%} %>
           <a class="next" href="#2" aria-label="next">
             <svg>
               <use href="#next"></use>
             </svg>
           </a>
         </div>
-  
-        <!-- Group 2   -->
+
+        <!--   Group 2 -->
         <div class="media-group" id="2">
           <a class="previous" href="#1">
             <svg>
               <use href="#previous"></use>
             </svg>
+          <% for(var i=5; i<bestsellers.length; i++){ %>
+            <div class="media-element">
+              <a href="/bookItems/<%= bestsellers[i]._id %>">
+                <img src="<%= bestsellers[i].image %>" alt="" ismap>
+              </a>
+            </div>
+          <%} %>
+          <a class="next" href="#2" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
           </a>
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book6.webp"
-              alt="" ismap>
-            </a>
-          </div>
-  
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book3.webp"
-              alt="" ismap>
-            </a>
-          </div>
-  
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book8.webp"
-              alt="" ismap>
-            </a>
-          </div>
-          
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book9.webp"
-              alt="" ismap>
-            </a>
-          </div>
-  
-          <div class="media-element">
-            <a href="/">
-              <img
-              src="/assets/img/book1.webp"
-              alt="" ismap>
-            </a>
-          </div>
         </div>
         
-  
-        
-  
         <div class="navigation-indicators">
           <div></div>
           <div></div>
@@ -152,6 +76,8 @@
           d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
       </symbol>
     </svg>
+        
+  
   
     <div class='recommended-books'>
       <h1>RECOMMENDED BOOKS</h1>

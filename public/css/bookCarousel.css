@@ -55,6 +55,23 @@ img, svg {
   font-size: 5rem;
   font-weight: lighter;
 }
+
+.content h2 {
+  position: relative;
+  color: rgb(68, 68, 198);
+  font-family: palatino;
+  font-size: 1.3rem;
+}
+.content .title {
+  position: relative;
+  margin-top: 6%;
+  text-align: center;
+}
+.content .price {
+  position: relative;
+  margin-top: 5%;
+  text-align: center;
+}
 .best-sellers-wrapper {
   position: relative;
   height: 100%;
