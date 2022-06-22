@@ -11,7 +11,7 @@ module.exports = (req,  res) =>{
                 if(same){
                     console.log("Login successfully")
                     // alert("Login successfully")
-                    // req.session.userId = user._id
+                    req.session.userId = user._id
                     // if passwords match, store user session
                     res.redirect("/")
                 } else {
