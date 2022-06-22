@@ -99,6 +99,20 @@ html {
   top: 28%;
 }
 
+.home .content h2 {
+  position: relative;
+  color: #fff;
+  font-family: palatino;
+  font-size: 1.1rem;
+}
+.content .title {
+  position: relative;
+  margin-top: 6%;
+}
+.content .price {
+  position: relative;
+  margin-top: 5%;
+}
 .home .book-launch {
   height: 105vh;
 }

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- <%- include("layouts/header"); -%> -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <script async src="/js/search.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/about.css">
+        <link rel="stylesheet" type="text/css" href="/css/contact.css">
+        <link rel="stylesheet" type="text/css" href="/css/Login.css">
+        <link rel="stylesheet" type="text/css" href="/css/Register.css">
+        <link rel="stylesheet" type="text/css" href="/css/bookCarousel.css">
+
+    
+        <link href = "/assets/css/all.css" rel="stylesheet">
+        <title>Tick Tack</title>
+    </head>
+<body>
+    <header>
+        <%- include('layouts/navbar'); -%>
+
+    </header>
+    <div class='header-wrapper'>
+        <img src="/assets/img/yellow-cover.jpg" alt=""></img>
+        <h1>"TODAY A READER, TOMORROW A LEADER."</h1>
+      </div>
+    <div class='best-sellers'>
+        <h1>Best Sellers</h1>
+      </div>
+  <div class="media-container">
+      <div class="media-scroller">
+        <!--   Group 1 -->
+        <div class="media-group" id="1">
+          <% for(var i=0; i<bestsellers.length/2; i++){ %>
+            <div class="media-element">
+              <a href="/bookItems/<%= bestsellers[i]._id %>">
+                <img src="<%= bestsellers[i].image %>" alt="" ismap>
+              </a>
+            </div>
+          <%} %>
+          <a class="next" href="#2" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+
+        <!--   Group 2 -->
+        <div class="media-group" id="2">
+          <a class="previous" href="#1">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          <% for(var i=5; i<bestsellers.length; i++){ %>
+            <div class="media-element">
+              <a href="/bookItems/<%= bestsellers[i]._id %>">
+                <img src="<%= bestsellers[i].image %>" alt="" ismap>
+              </a>
+            </div>
+          <%} %>
+          <a class="next" href="#2" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+        
+        <div class="navigation-indicators">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+  
+      </div>
+  </div>
+  
+    <svg>
+      <symbol id="next" viewBox="0 0 256 512">
+        <path fill="white"
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+      </symbol>
+      <symbol id="previous" viewBox="0 0 256 512">
+        <path fill="white"
+          d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+      </symbol>
+    </svg>
+        
+  
+        <!--   Group 1 -->
+        <div class="media-group" id="1">
+          
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book1.webp"
+              alt="" ismap>
+            </a>
+          </div>
+  
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book2.webp"
+              alt="" ismap>
+            </a>
+          </div>
+  
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book3.webp"
+              alt="" ismap>
+            </a>
+          </div>
+          
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book4.webp"
+              alt="" ismap>
+            </a>
+          </div>
+  
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book5.webp"
+              alt="" ismap>
+            </a>
+          </div>
+          
+          <a class="next" href="#2" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!-- Group 2   -->
+        <div class="media-group" id="2">
+          <a class="previous" href="#1">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book6.webp"
+              alt="" ismap>
+            </a>
+          </div>
+  
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book3.webp"
+              alt="" ismap>
+            </a>
+          </div>
+  
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book8.webp"
+              alt="" ismap>
+            </a>
+          </div>
+          
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book9.webp"
+              alt="" ismap>
+            </a>
+          </div>
+  
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book1.webp"
+              alt="" ismap>
+            </a>
+          </div>
+        </div>
+        
+  
+        
+  
+        <div class="navigation-indicators">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+  
+      </div>
+  </div>
+  
+    <svg>
+      <symbol id="next" viewBox="0 0 256 512">
+        <path fill="white"
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+      </symbol>
+      <symbol id="previous" viewBox="0 0 256 512">
+        <path fill="white"
+          d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+      </symbol>
+    </svg>
+  
+    <div class='recommended-books'>
+      <h1>RECOMMENDED BOOKS</h1>
+    </div>
+    <div class="media-container">
+      <div class="media-scroller">
+  
+        <!--   Group 3 -->
+        <div class="media-group" id="3">
+          
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book6.webp"
+              alt="" ismap>
+            </a>
+          </div>
+  
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book3.webp"
+              alt="" ismap>
+            </a>
+          </div>
+  
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book8.webp"
+              alt="" ismap>
+            </a>
+          </div>
+          
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book9.webp"
+              alt="" ismap>
+            </a>
+          </div>
+  
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book1.webp"
+              alt="" ismap>
+            </a>
+          </div>
+      
+          
+          <a class="next" href="#4" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!-- Group 4   -->
+        <div class="media-group" id="4">
+          <a class="previous" href="#3">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book1.webp"
+              alt="" ismap>
+            </a>
+          </div>
+  
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book2.webp"
+              alt="" ismap>
+            </a>
+          </div>
+  
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book3.webp"
+              alt="" ismap>
+            </a>
+          </div>
+          
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book4.webp"
+              alt="" ismap>
+            </a>
+          </div>
+  
+          <div class="media-element">
+            <a href="/">
+              <img
+              src="/assets/img/book5.webp"
+              alt="" ismap>
+            </a>
+          </div>
+        
+  
+        
+  
+        <div class="navigation-indicators">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+  
+      </div>
+  </div>
+    </div>
+    
+    <div class='book-launch'>
+        <h1>Coming Soon</h1>
+        <div class='book-launch-wrapper'>
+        <div class='book-launch-wrapper-left'>
+            <h1>Introducing The Land of AILOO</h1>
+            <p class='author'>By Mark Walker</p>
+            <p class='date'>When: Jul 12, 2023, 7:00 PM</p>
+            <p class='location'>Where: 500 Terry A Francois Blvd, San Francisco, CA 94158, USA</p>
+            <a href='#'>Check Out Now</a>
+        </div>
+  
+          <div class='book-launch-wrapper-right'>
+            <div class='image-outer'>
+              <div class='image-inner'>
+                <img src="/assets/img/upcoming.webp" alt = ''></img>;
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <%- include('layouts/footer'); -%>
+    <%- include('layouts/scripts'); -%>
+
+</body>
+</html>

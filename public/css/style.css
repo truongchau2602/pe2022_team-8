@@ -118,45 +118,6 @@ header{
 }
 
 
-.front .search-container{
-    display: grid;
-    grid-template-columns: 80% 20%;
-    position: absolute;
-    top: 70%;
-    right: 20%;
-    width: 700px;
-    height: 60px;
-    border-radius: 3em;
-    overflow: hidden;
-    background: #fff;
-}
-
-.front .search-container input{
-    width: 100%;
-    border-radius: 3em;
-    text-indent: 2em;
-    background: #fff;
-    border-style: none;
-    font-family: palatino;
-    font-size: 1.2em;
-    border-style: none;
-    outline: none;
-}
-
-.front .search-container button{
-    position: relative;
-    border-radius: 3em;
-    transform: scale(0.8);
-    background: #0E345A;
-    border-color: transparent;
-    color: #fff;
-    font-family: palatino;
-    font-size: 1.8em;
-    
-    cursor: pointer;
-}
-
-
 
 .bestseller{
     height: 100vh;
