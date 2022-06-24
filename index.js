@@ -28,51 +28,29 @@ app.use(expressSession({
 app.listen(4005, ()=>{
     console.log("Ok. App listen on port 4005")
 })
-
+const homeController = require("./controllers/home")
 const Book = require("./models/book")
-app.get("/",(req,res)=>{
-    Book.find({label:"Best Sellers"}, function(err, bookItems){
-        // console.log("Best sellers:",bookItems)
-        if(err){
-            console.log(err)
-        }
-        res.render("home",{
-            bestsellers:bookItems
-        })
-    })
-    // console.log(req.session)
-    // res.render("home",{
-    //     bestsellers
-    // })
+const contactController = require("./controllers/contact")
+const aboutController = require("./controllers/about")
+const loginController = require("./controllers/login")
+const registerController = require("./controllers/register")
+const logoutController = require("./controllers/logout")
+const checkoutController = require("./controllers/checkout")
+global.loggedIn = null
+app.use("*", (req,res,next)=>{
+    loggedIn = req.session.userId
+    next()
 })
-app.get("/contact",(req,res)=>{
-    res.render("contact")
-})
+app.get("/", homeController)
+app.get("/contact",contactController)
 
-app.get("/auth/login", (req, res)=>{
-    // res.send("redirect to login")
-    res.render("login")
-})
-app.get("/about", (req,res)=>{
-    res.render("about")
-})
-app.get("/login",(req,res)=>{
-    res.render("login")
-})
-app.get("/register", (req,res)=>{
-    res.render("register")
-})
-app.get("/auth/register", (req, res)=>{
-    res.render("register")
-})
-app.get("/checkout", authMiddleware, (req,res)=>{
-    console.log("invoke in controller")
-    res.render("checkout")
-    // if(req.session.userId){
-    //     return res.render("checkout")
-    // }
-    // res.redirect("/auth/login")
-})
+app.get("/auth/login", loginController)
+app.get("/about", aboutController)
+app.get("/login",loginController)
+app.get("/register", registerController)
+app.get("/auth/register", registerController)
+app.get("/auth/logout", logoutController)
+app.get("/checkout", authMiddleware, checkoutController)
 app.get("/bookItem",(req,res)=>{
     res.render("bookItem")
 })
