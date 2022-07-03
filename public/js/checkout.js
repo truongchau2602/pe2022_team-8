@@ -4,19 +4,19 @@ var promoPrice;
 var fadeTime = 300;
 
 /* Assign actions */
-$('.quantity input').change(function() {
+$('.quantity input').on("change",function() {
   updateQuantity(this);
 });
 
-$('.remove button').click(function() {
+$('.remove button').on("click",function() {
   removeItem(this);
 });
 
-$(document).ready(function() {
+$(document).jQuery(function() {
   updateSumItems();
 });
 
-$('.promo-code-cta').click(function() {
+$('.promo-code-cta').on("click",function() {
 
   promoCode = $('#promo-code').val();
 

@@ -5,6 +5,8 @@ const User = require("../models/user")
 // Validate username and password from /auth/login
 module.exports = (req,  res) =>{
     const {username, password} = req.body
+    // console.log("username:",username)
+    // console.log("req.body.username", req.body.username)
     User.findOne({username:username}, (err,user)=>{
         if(user){
             bcrypt.compare(password, user.password, (err, same)=>{

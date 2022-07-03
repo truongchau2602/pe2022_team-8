@@ -24,7 +24,6 @@ app.use(expressSession({
     secret:"keyboard cat"
 }))
 
-
 app.listen(4005, ()=>{
     console.log("Ok. App listen on port 4005")
 })
@@ -37,10 +36,14 @@ const registerController = require("./controllers/register")
 const logoutController = require("./controllers/logout")
 const checkoutController = require("./controllers/checkout")
 global.loggedIn = null
+// global.cart = null
 app.use("*", (req,res,next)=>{
     loggedIn = req.session.userId
+    // cart = req.session.cart = []
+    // req.session.cart = []
     next()
 })
+
 app.get("/", homeController)
 app.get("/contact",contactController)
 
@@ -56,16 +59,38 @@ app.get("/bookItem",(req,res)=>{
 })
 app.get("/bookItems/:id", (req, res)=>{
     Book.findById(req.params.id, function(err, bookDetail){
+        // console.log(req.params.id)
+        // res.send("id:", req.params.id)
+        // console.log("Book Detail Id:", bookDetail.id)
         res.render("bookItem",{
             bookDetail
         })
+        // res.send('<p>some html</p>')
+
     })
 })
 app.get("/bookStore", (req,res)=>{
     res.render("bookStore")
 } )
+app.get("/bookItemSample", (req,res)=>{
+    res.render("bookItemSample")
+} )
 
 app.post("/auth/users/login", loginUserController)
 app.post("/auth/users/register",registerUserController)
+app.post("/add-to-cart",(req, res)=>{
+    console.log("Book ID:",req.body.bookID)
+    // console.log("Book Detail:",req.body.bookDetail)
 
+    // req.session.cart.push(req.body.bookDetail)
+    // console.log("Cart item:",req.session.cart[0])
+    console.log("Cart length:",req.session.cart)
+    Book.findById(req.body.bookID, function(err, book){
+        console.log("book:",book)
+        res.render("checkout",{
+            book
+        })
+
+    })
+})
 

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const BookSchema = new Schema({
+const CartSchema = new Schema({
     productName: String,
     authorName:{
         type:String,
@@ -29,5 +29,5 @@ const BookSchema = new Schema({
     image: String
 })
 
-const Book = mongoose.model('Book', BookSchema)
-module.exports = Book
+const Cart = mongoose.model('Cart', CartSchema)
+module.exports = Cart

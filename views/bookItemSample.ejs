@@ -10,17 +10,17 @@
       <div class="container">
         <article class="item-pane">
           <div class="item-preview">
-            <div class="book" style="background: url('<%= bookDetail.image %>');   
+            <div class="book" style="background: url('/assets/img/Of_Mice_And_Men.jpeg');   
                         background-size: 358px 358px;
                         background-position: 50% 50%;"
                         >
                       </div>
           </div>
           <div class="item-details">
-            <h1><%= bookDetail.productName %></h1><span class="subtitle"><%= bookDetail.authorName%></span>
+            <h1>Of Mice and Men</h1><span class="subtitle">John Steinbeck</span>
             <div class="pane__section">
               <p>
-                  <%= bookDetail.description %>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus convallis sem. Nunc sed tristique augue. Aenean at nulla vel lacus volutpat bibendum vitae ut nibh. Aliquam eu metus et purus rutrum malesuada. Aenean in auctor mauris, non vulputate libero. Nullam auctor, purus ut cursus convallis, lectus tellus dignissim lectus, id tempor ipsum leo ut nulla. Vestibulum vitae elit erat.
                 - <a href="https://www.lipsum.com/">Lisum.com</a>
               </p>
             </div>
@@ -33,7 +33,7 @@
                 <dt>Publisher</dt>
                 <dd>Tick Tak</dd>
                 <dt>Published</dt>
-                <dd>2022</dd>
+                <dd>1937</dd>
                 <dt>Edition</dt>
                 <dd>N/A</dd>
                 <dt>ISBN</dt>
@@ -42,12 +42,9 @@
             </div>
             <div class="pane__section clearfix">
               <span class="item-price">10.99<span class="item-price__units">NZD</span></span>
-              <form action="/add-to-cart" method="POST" enctype="application/x-www-form-urlencoded"> 
-                <input type="hidden" id="bookID" id="bookID" name="bookID" value="<%= bookDetail.id%>" placeholder="1" >
-                <input type="hidden" id="bookDetail" id="bookDetail" name="bookDetail" value="<%= bookDetail%>" placeholder="2" >
+              
 
-                <!-- <a class="button buy-button" href="/add-to-cart">ADD TO CART</a> -->
-                <button type="submit" class="button buy-button">ADD TO CART</button>
+                <a class="button buy-button" href="/">ADD TO CART</a>
               </form>
             </div>
           </div>

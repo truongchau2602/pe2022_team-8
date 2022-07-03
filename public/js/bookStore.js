@@ -6,7 +6,9 @@ $("li.book-item").each(function() {
     $this.find(".bk-front > div").css('background-color', $(this).data("color"));
     $this.find(".bk-left").css('background-color', $(this).data("color"));
     $this.find(".back-color").css('background-color', $(this).data("color"));
-  
+    $this.find(".item-details a.book-preview").on('click', function() {
+      displayBookDetails($this);
+    });
     $this.find(".item-details a.button").on('click', function() {
       displayBookDetails($this);
     });

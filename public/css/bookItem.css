@@ -45,10 +45,10 @@ font-family: Roboto, sans-serif;
   flex-grow: 1;
 }
 
-.bookItem .pane__section {
+.pane__section {
   padding-top: 26px;
 }
-.bookItem .pane__section:not(:last-child) {
+.pane__section:not(:last-child) {
   padding-bottom: 26px;
   border-bottom: 1px solid #d4d4d4;
 }

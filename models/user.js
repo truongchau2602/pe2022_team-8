@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require("bcrypt")
+const Book = require("./book.js")
 
 const userSchema = new mongoose.Schema({
     username:{type:String, required:true},
@@ -10,7 +11,7 @@ const userSchema = new mongoose.Schema({
     workplace:String,
     loans:[{
         type:mongoose.Schema.Types.ObjectId,
-        ref:"BookInstance",
+        ref:"Book",
     }],
     rating:[{
         type:mongoose.Schema.Types.ObjectId,

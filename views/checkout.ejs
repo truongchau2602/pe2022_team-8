@@ -8,7 +8,7 @@
       <main>
 
         
-          <h1 class='checkout-header'>My Order</h1>
+          <h1 class='checkout-header'>My Borrow List</h1>
       
       <div class="basket">
         <div class="basket-module">
@@ -26,6 +26,29 @@
         </div>
 
         <div class="basket-product">
+          <div class="item">
+            <div class="product-image">
+              <img src="<%= book.image%>" alt="Placholder Image 2" class="product-frame">
+            </div>
+            <div class="product-details">
+              <h1><strong><span class="item-quantity">1</span> <%= book.productName %></strong></h1>
+              <p><strong><%= book.authorName %></strong></p>
+              <p>Product Code - <%= book.id %></p>
+            </div>
+          </div>
+          <div class="price"><%= book.price %></div>
+          <div class="quantity">
+            <input type="number" value="1" min="1" class="quantity-field">
+          </div>
+          <div class="subtotal"><%= book.price %></div>
+          <div class="remove">
+            <button>Remove</button>
+          </div>
+        </div>
+        
+        
+
+        <!-- <div class="basket-product">
           <div class="item">
             <div class="product-image">
               <img src="/assets/img/book1.webp" alt="Placholder Image 2" class="product-frame">
@@ -86,8 +109,10 @@
           <div class="remove">
             <button>Remove</button>
           </div>
-        </div>
+        </div> -->
       </div>
+
+
       <aside>
         <div class="summary">
           <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
@@ -122,6 +147,8 @@
    
     <%- include('layouts/footer'); -%>
     <%- include('layouts/scripts'); -%>
+    <script src="/js/checkout.js"></script>
+
 
 </body>
 </html>

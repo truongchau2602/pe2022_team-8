@@ -67,19 +67,20 @@ header{
 .nav ul li a{
     font-family: palatino;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #0E345A;
 }
 
 .nav ul li:nth-child(5) i{
-    margin-top:4%;
+    /* margin-top:4%; */
+    margin-bottom: 4%;
     margin-right: 10px;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 .nav ul li:nth-child(6) i{
     position: relative;
-    margin-top: 5%;
+    margin-bottom: 4%;
     font-size: 1.4em;
     left: -20%;
 }

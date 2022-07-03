@@ -1,6 +1,10 @@
 module.exports = (req,res)=>{
-    console.log("invoke in controller")
+    if(loggedIn==null){
+        console.log("user already loggin")
+        return res.render("checkout")
+    }
     res.render("checkout")
+    
     // if(req.session.userId){
     //     return res.render("checkout")
     // }
